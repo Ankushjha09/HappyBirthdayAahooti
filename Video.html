@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <style>
+        /* Body setup for full screen */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #203a43; /* New background color */
+            overflow: hidden; /* Prevent scrolling issues */
+        }
+
+        /* Container to ensure video stays within bounds */
+        .video-container {
+            width: 100%;
+            height: auto;
+            max-width: 80%; /* Restrict max width to 80% of screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-height: 80vh; /* Ensure the video doesn't exceed 80% of the viewport height */
+            border: 2px solid #000;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video container for proper scaling -->
+    <div class="video-container">
+        <video controls>
+            <source src="IMG_6536.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Navigation button -->
+    <a href="letter.html">
+        <button>Go to Letter Page</button>
+    </a>
+</body>
+</html>
